@@ -1,0 +1,28 @@
+<template name="predictions">
+  {{#if afterLockDate}}
+    <h1>All Predictions</h1>
+  {{else}}
+    <h1>Your Predictions</h1>
+  {{/if}}
+  <table class="table table-striped">
+    <tr>
+      <th>Name</th>
+      <th>A1B4</th>
+      <th>A2B3</th>
+      <th>A3B2</th>
+      <th>A4B1</th>
+      <th>Finalist 2</th>
+      <th>Finalist 1</th>
+      <th>Winner</th>
+    </tr>
+    {{#if afterLockDate}}
+      {{#each prediction}}
+        {{> matches}}
+      {{/each}}
+    {{else}}
+      {{#each userPrediction}}
+        {{> matches}}
+      {{/each}}
+    {{/if}}
+  </table>
+</template>

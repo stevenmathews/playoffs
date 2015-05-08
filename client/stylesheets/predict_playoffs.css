@@ -1,0 +1,29 @@
+#container {
+  width: 800px;
+  height: 600px;
+  margin: 0 auto;
+  border: solid black;
+}
+section {
+  width: 130px;
+  height: 520px;
+  float: left;
+}
+#semiFinals > div {
+  margin-top: 91px;
+}
+#semiFinals > div:first-child {
+  margin-top: 37px;
+}
+#final {
+  margin-left: 150px;
+}
+#final > div {
+  margin-top: 230px;
+}
+#final > div:first-child {
+  margin-top: 105px;
+}
+#winner > div {
+  margin: 250px 0px 0px 115px;
+}

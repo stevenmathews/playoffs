@@ -1,0 +1,20 @@
+<template name="bracket">
+  <h1>Playoffs Predictions</h1>
+  {{#if currentUser}}
+    <article id="container">
+      <form>
+        {{> semiFinals}}
+        {{> final}}
+        {{> winner}}
+        {{#if predictionsLocked}}
+          <h3>Predictions are Locked!</h3>
+          <a class="btn btn-primary" href="/predictions" role="button">View All Predictions</a>
+        {{else}}
+         <input type="submit" value="Submit Predictions!"/>
+        {{/if}}
+      </form>
+    </article>
+  {{else}}
+    <h4>(Please sign in to make your predictions)</h4>
+  {{/if}}
+</template>
